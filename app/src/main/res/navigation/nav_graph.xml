@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/googleMapFragment">
+
+    <fragment
+        android:id="@+id/googleMapFragment"
+        android:name="com.schwarzit.lovenpark.mappin.ui.view.GoogleMapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_google_map">
+        <action
+            android:id="@+id/action_googleMapFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_locationsFragmet"
+            app:destination="@id/locationsFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_socialLoginFragment"
+            app:destination="@id/socialLoginFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_loginRegistrationFragment"
+            app:destination="@id/loginRegistrationFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_locationInfoWindowFragment"
+            app:destination="@id/locationInfoWindowFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_locationInfoWindowFragment2"
+            app:destination="@id/locationInfoWindowFragment" />
+        <action
+            android:id="@+id/action_googleMapFragment_to_bookmarksFragment"
+            app:destination="@id/bookmarksFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.schwarzit.lovenpark.RegistrationFragment"
+        android:label="@string/registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_termsAndConditionsFragment"
+            app:destination="@id/termsAndConditionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.schwarzit.lovenpark.LoginFragment"
+        android:label="@string/sign_in_profile"
+        tools:layout="@layout/fragment_login">
+        <deepLink app:uri="https://www.kaufland.com" />
+        <action
+            android:id="@+id/action_loginFragment_to_userProfileFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgottenPasswordFragment"
+            app:destination="@id/forgottenPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/baseGoogleMapFragment"
+        android:name="com.schwarzit.lovenpark.BaseGoogleMapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_base_google_map" />
+
+    <fragment
+        android:id="@+id/updateUserProfileFragment"
+        android:name="com.schwarzit.lovenpark.UpdateUserProfileFragment"
+        android:label="@string/update_profile"
+        tools:layout="@layout/fragment_update_user_profile">
+        <action
+            android:id="@+id/action_updateUserProfileFragment_to_userProfileFragment"
+            app:destination="@id/reportsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.schwarzit.lovenpark.profile.view.ReportsFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_reports">
+        <action
+            android:id="@+id/action_reportsFragment_to_updateUserProfileFragment"
+            app:destination="@id/updateUserProfileFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_confirmDeleteUserFragment"
+            app:destination="@id/confirmDeleteUserFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_userProfileSettingsFragment"
+            app:destination="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_signalDetailsFragment"
+            app:destination="@id/signalDetailsFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_socialLoginFragment"
+            app:destination="@id/socialLoginFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_locationInfoWindowFragment"
+            app:destination="@id/locationInfoWindowFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signalDetailsFragment"
+        android:name="com.schwarzit.lovenpark.profile.signals.view.details.SignalDetailsFragment"
+        android:label="@string/signal_overview"
+        tools:layout="@layout/fragment_signal_details" >
+        <argument
+            android:name="signal_id"
+            app:argType="string" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_delete_profile"
+        android:name="com.schwarzit.lovenpark.profile.view.DeleteProfileDialogFragment"
+        tools:layout="@layout/fragment_delete_profile_dialog">
+    </dialog>
+
+    <dialog
+        android:id="@+id/uploadPhotoOption"
+        android:name="com.schwarzit.lovenpark.ChooseUploadPhotoOptionFragment"
+        android:label="@string/upload_photo"
+        tools:layout="@layout/dialog_choose_upload_photo_option" />
+
+    <dialog
+        android:id="@+id/confirmDeleteUserFragment"
+        android:name="com.schwarzit.lovenpark.profile.view.ConfirmDeleteUserFragment"
+        android:label="@string/confirm_profile_deletion"
+        tools:layout="@layout/dialog_confirm_delete_user">
+        <action
+            android:id="@+id/action_confirmDeleteUserFragment_to_userProfileFragment"
+            app:destination="@id/reportsFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/signalRootFragment"
+        android:name="com.schwarzit.lovenpark.signal.SignalRootFragment"
+        android:label="@string/signal"
+        tools:layout="@layout/fragment_signal_root" >
+        <action
+            android:id="@+id/action_signalRootFragment_to_userProfileFragment"
+            app:destination="@id/reportsFragment"
+            app:popUpTo="@+id/googleMapFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_signalRootFragment_to_locationInfoWindowFragment"
+            app:destination="@id/locationInfoWindowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginRegistrationFragment"
+        android:name="com.schwarzit.lovenpark.LoginRegistrationFragment"
+        android:label="fragment_login_registration"
+        tools:layout="@layout/fragment_login_registration">
+        <action
+            android:id="@+id/action_loginRegistrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginRegistrationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginRegistrationFragment_to_mapsFragment"
+            app:destination="@id/googleMapFragment" />
+        <action
+            android:id="@+id/action_loginRegistrationFragment_to_locationInfoWindowFragment"
+            app:destination="@id/locationInfoWindowFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsAndConditionsFragment"
+        android:name="com.schwarzit.lovenpark.TermsAndConditionsFragment"
+        android:label="@string/terms_and_conditions"
+        tools:layout="@layout/fragment_terms_and_conditions">
+        <action
+            android:id="@+id/action_termsAndConditionsFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.schwarzit.lovenpark.camera.CameraFragment"
+        android:label="@string/fragment_title_add_photos"
+        tools:layout="@layout/fragment_camera" />
+
+    <fragment
+        android:id="@+id/signalDescriptionFragment"
+        android:name="com.schwarzit.lovenpark.signal.SignalDescriptionFragment"
+        android:label="@string/fragment_title_description"
+        tools:layout="@layout/fragment_signal_description" />
+    <fragment
+        android:id="@+id/forgottenPasswordFragment"
+        android:name="com.schwarzit.lovenpark.ForgottenPasswordFragment"
+        android:label="@string/sign_in_profile"
+        tools:layout="@layout/fragment_forgotten_password" >
+        <action
+            android:id="@+id/action_forgottenPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginRegistrationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="com.schwarzit.lovenpark.locationlist.LocationsFragment"
+        android:label="@string/location_fragment_label"
+        tools:layout="@layout/fragment_locations">
+        <action
+            android:id="@+id/action_locationsFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+        <action
+            android:id="@+id/action_locationsFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationDetailFragment"
+        android:name="com.schwarzit.lovenpark.locationlist.LocationDetailFragment"
+        tools:layout="@layout/fragment_location_detail">
+        <action
+            android:id="@+id/action_locationDetailFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment" />
+        <action
+            android:id="@+id/action_locationDetailFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment" />
+        <action
+            android:id="@+id/action_locationDetailFragment_to_socialLoginFragment"
+            app:destination="@id/socialLoginFragment" />
+        <action
+            android:id="@+id/action_locationDetailFragment_to_loginRegistrationFragment"
+            app:destination="@id/loginRegistrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutSectionFragment"
+        android:name="com.schwarzit.lovenpark.about.overview.AboutSectionFragment"
+        android:label="@string/about_park"
+        tools:layout="@layout/fragment_about_section">
+        <action
+            android:id="@+id/action_aboutSectionFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.schwarzit.lovenpark.about.detail.ArticleDetailFragment"
+        android:label="@string/article_details"
+        tools:layout="@layout/fragment_article_detail">
+
+        <argument
+            android:name="article"
+            app:argType="com.schwarzit.lovenpark.about.Article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signalOverviewFragment"
+        android:name="com.schwarzit.lovenpark.signal.SignalOverviewFragment"
+        android:label="@string/signal_overview"
+        tools:layout="@layout/fragment_signal_overview" />
+
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.schwarzit.lovenpark.profile.view.UserAccountFragment"
+        android:label="@string/user_profile_settings_fragment_label"
+        tools:layout="@layout/fragment_user_account">
+        <action
+            android:id="@+id/action_userAccountFragment_to_termsAndConditionsFragment"
+            app:destination="@id/termsAndConditionsFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userProfileChangePassword"
+            app:destination="@id/userProfileChangePassword"
+            app:popUpTo="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment"
+            app:popUpTo="@id/userAccountFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_userAccountFragment_to_privacyAndPolicyFragment"
+            app:destination="@id/privacyAndPolicy" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userAccountSettingsFragment"
+            app:destination="@id/userAccountSettingsFragment"/>
+        <action
+            android:id="@+id/action_userAccountFragment_to_bookmarksFragment"
+            app:destination="@id/bookmarksFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileChangePassword"
+        android:name="com.schwarzit.lovenpark.profile.view.UserProfileChangePasswordFragment"
+        android:label="@string/user_profile_change_password"
+        tools:layout="@layout/fragment_user_profile_change_password">
+
+    </fragment>
+    <fragment
+        android:id="@+id/socialLoginFragment"
+        android:name="com.schwarzit.lovenpark.user.socialLogin.SocialLoginFragment"
+        tools:layout="@layout/fragment_social_login"
+        >
+        <action
+            android:id="@+id/action_socialLoginFragment_to_termsAndConditionsFragment"
+            app:destination="@id/termsAndConditionsFragment" />
+        <action
+            android:id="@+id/action_socialLoginFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment"
+            app:popUpTo="@+id/googleMapFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_socialLoginFragment_to_locationInfoWindowFragment2"
+            app:destination="@id/locationInfoWindowFragment" />
+        <action
+            android:id="@+id/action_socialLoginFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyAndPolicy"
+        android:name="com.schwarzit.lovenpark.PrivacyAndPolicy"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_privacy_and_policy" />
+    <dialog
+        android:id="@+id/locationInfoWindowFragment"
+        android:name="com.schwarzit.lovenpark.locationlist.LocationInfoWindowFragment"
+        android:label="fragment_location_info_window"
+        tools:layout="@layout/fragment_location_info_window" >
+        <action
+            android:id="@+id/action_locationInfoWindowFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment" />
+        <action
+            android:id="@+id/action_locationInfoWindowFragment_to_socialLoginFragment"
+            app:destination="@id/socialLoginFragment" />
+        <action
+            android:id="@+id/action_locationInfoWindowFragment_to_loginRegistrationFragment"
+            app:destination="@id/loginRegistrationFragment" />
+        <action
+            android:id="@+id/action_locationInfoWindowFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment" />
+        <action
+            android:id="@+id/action_locationInfoWindowFragment_to_userProfileFragment"
+            app:destination="@id/reportsFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/userAccountSettingsFragment"
+        android:name="com.schwarzit.lovenpark.profile.view.UserAccountSettingsFragment"
+        android:label="UserAccountSettingsFragment" >
+        <action android:id="@+id/action_userAccountSettingsFragment_to_userAccountFragment"
+            app:destination="@id/userAccountFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.schwarzit.lovenpark.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_googleMapFragment"
+            app:destination="@id/googleMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.schwarzit.lovenpark.profile.bookmarks.BookmarksFragment"
+        android:label="fragment_boormarks"
+        tools:layout="@layout/fragment_bookmarks" >
+
+        <action
+            android:id="@+id/action_bookmarksFragment_to_signalRootFragment"
+            app:destination="@id/signalRootFragment"/>
+
+    </fragment>
+
+</navigation>

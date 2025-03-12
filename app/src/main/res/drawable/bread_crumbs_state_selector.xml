@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/elipse3" app:state_empty="true" />
+    <item android:drawable="@drawable/elipse2" app:state_current="true" />
+    <item android:drawable="@drawable/elipse1" app:state_done="true" />
+    <item android:drawable="@drawable/signal_line_86" app:state_line_completed="true" />
+    <item android:drawable="@drawable/signal_line_86_2" app:state_line_completed="false" />
+</selector>

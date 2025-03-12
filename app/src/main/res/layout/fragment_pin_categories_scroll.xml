@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:scrollbars="none"
+    tools:context=".PinCategoriesScrollFragment">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/menu"
+            style="@style/ChipCategory"
+            app:chipIcon="@drawable/list_2_1"
+            app:chipIconSize="16dp"
+            android:visibility="gone"
+            app:textEndPadding="0dp"
+            app:textStartPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/bicycle"
+            style="@style/ChipCategory"
+            android:text="@string/map_pin_title_bicycle"
+            app:chipIcon="@drawable/ic_cycling" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/trash"
+            style="@style/ChipCategory"
+            android:text="@string/map_pin_title_trash"
+            app:chipIcon="@drawable/ic_trashcan" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/bench"
+            style="@style/ChipCategory"
+            android:text="@string/map_pin_title_bench"
+            app:chipIcon="@drawable/ic_bench" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/other"
+            style="@style/ChipCategory"
+            android:text="@string/map_pin_title_other"
+            app:chipIcon="@drawable/ic_tree" />
+    </com.google.android.material.chip.ChipGroup>
+
+</HorizontalScrollView>
+

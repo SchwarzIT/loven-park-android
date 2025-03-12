@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp">
+
+    <TextView
+        android:id="@+id/tvRegistrationTitle"
+        style="@style/TitleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/create_your_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRegistrationDescription"
+        style="@style/BodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_a_profile_as_complete_information_in_the_fields_below"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistrationTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRegistrationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:inputType="text"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/ic_profile_registration"
+        app:endIconMode="custom"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@drawable/ic_profile_registration"
+        app:errorIconTint="@color/bittersweet_shimmer"
+        app:errorTextColor="@color/bittersweet_shimmer"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistrationDescription">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegistrationName"
+            style="@style/LabelLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_edit_text_line"
+            android:hint="@string/first_and_last_name"
+            android:textColorHint="@color/granite_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRegistrationPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:inputType="phone"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/ic_call_registration"
+        app:endIconMode="custom"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@drawable/ic_call_registration"
+        app:errorIconTint="@color/bittersweet_shimmer"
+        app:errorTextColor="@color/bittersweet_shimmer"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegistrationPhoneNumber"
+            style="@style/LabelLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_text_line"
+            android:hint="@string/phone_number"
+            android:textColorHint="@color/granite_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRegistrationEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:inputType="textEmailAddress"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/ic_mail_registration"
+        app:endIconMode="custom"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@drawable/ic_mail_registration"
+        app:errorIconTint="@color/bittersweet_shimmer"
+        app:errorTextColor="@color/bittersweet_shimmer"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationPhoneNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegistrationEmail"
+            style="@style/LabelLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_text_line"
+            android:hint="@string/e_mail"
+            android:textColorHint="@color/granite_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRegistrationPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/password"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/ic_lock"
+        app:endIconMode="custom"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@drawable/ic_lock"
+        app:errorIconTint="@color/bittersweet_shimmer"
+        app:errorTextColor="@color/bittersweet_shimmer"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegistrationPassword"
+            style="@style/LabelLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_text_line"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/granite_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkboxTermsAndConditions"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:theme="@style/CheckBoxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvTermsAndConditions"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="9dp"
+        android:paddingHorizontal="0dp"
+        android:text="@string/terms_and_conditions_registration"
+        android:textAppearance="@style/LabelMedium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationPassword" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/LabelLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/i_agree_with"
+        app:layout_constraintStart_toEndOf="@+id/checkboxTermsAndConditions"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRegistrationPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmRegistration"
+        style="@style/PrimaryFilledLargeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginBottom="40dp"
+        android:enabled="false"
+        android:text="@string/confirm"
+        android:textAppearance="@style/LabelLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

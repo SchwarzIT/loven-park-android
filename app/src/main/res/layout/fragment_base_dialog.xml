@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_forgotten_password"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/basedialog_background"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/iv_thank_pop_up"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/iv_thank_pop_up"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        style="@style/HeadlineSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="0sp"
+        android:translationY="0.14sp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toStartOf="@id/ivDialogClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_thank_pop_up"
+        tools:text="@string/forgotten_password_dialog_title" />
+
+    <TextView
+        android:id="@+id/tvDialogDescription"
+        style="@style/BodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle"
+        tools:text="@string/forgotten_password_dialog_description" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="0dp"
+        style="@style/SignalThankYouPopUpOkButton"
+        android:text="@string/okay"
+        android:visibility="gone"
+        app:icon="@drawable/ic_check"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/tvDialogDescription"
+        app:layout_constraintEnd_toEndOf="@id/tvDialogDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvDialogDescription" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDialogDescription">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_confirm"
+            style="@style/SignalNextButton"
+            android:layout_width="131dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/signal_confirm_dialog_button_confirm_text"
+            android:textAppearance="@style/LabelSmall"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_check"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_skip"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_skip"
+            style="@style/SignalCanselButton"
+            android:layout_width="131dp"
+            android:layout_marginTop="24dp"
+            android:text="Discard"
+            android:textAppearance="@style/LabelLarge"
+            android:textColor="@color/fern_green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_trash"
+            app:iconGravity="textStart"
+            app:iconTint="@color/fern_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivDialogClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_close_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDialogImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDialogClose"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="310dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="12dp">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="310dp"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/about_cleaning_park_1" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

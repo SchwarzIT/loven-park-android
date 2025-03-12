@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:color="@color/dirty_white" android:state_checked="false" app:chipIconTint="@color/dirty_white" />
+    <item android:color="@color/fern_green" android:state_checked="true" app:chipIconTint="@color/fern_green" />
+
+</selector>

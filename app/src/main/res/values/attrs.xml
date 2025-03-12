@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MessageState">
+        <attr name="state_done" format="boolean"/>
+        <attr name="state_current" format="boolean"/>
+        <attr name="state_empty" format="boolean" />
+        <attr name="state_line_completed" format="boolean" />
+        <attr name="state_line_not_completed" format="boolean" />
+    </declare-styleable>
+</resources>

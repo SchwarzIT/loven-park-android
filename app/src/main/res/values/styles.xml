@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- BASIC BUTTONS -->
+    <style name="BasicButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:shape">rectangle</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="BasicOutlinedButton" parent="BasicButton">
+        <item name="iconGravity">textStart</item>
+        <item name="android:shape">rectangle</item>
+        <item name="strokeWidth">0.5dp</item>
+    </style>
+
+    <style name="BasicRoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconTint">@null</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="BasicLinkButton" parent="BasicButton">
+        <item name="android:textColor">@color/fern_green</item>
+        <item name="android:drawableTint">@color/fern_green</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:paddingHorizontal">0dp</item>
+        <item name="android:paddingVertical">0dp</item>
+    </style>
+    <!-- BASIC BUTTONS -->
+
+    <!-- COLORED BUTTONS -->
+    <style name="PrimaryFilledButton" parent="BasicButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/fern_green</item>
+        <item name="android:drawableTint">@color/white</item>
+    </style>
+
+    <style name="SecondaryFilledButton" parent="BasicButton">
+        <item name="android:textColor">@color/fern_green</item>
+        <item name="android:backgroundTint">@color/dirty_white</item>
+        <item name="drawableTint">@color/fern_green</item>
+    </style>
+
+    <style name="PrimaryOutlinedButton" parent="BasicOutlinedButton">
+        <item name="android:textColor">@color/fern_green</item>
+        <item name="drawableTint">@color/fern_green</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/fern_green</item>
+    </style>
+
+    <style name="PrimaryIconButton" parent="BasicRoundedButton">
+        <item name="iconTint">@color/dirty_white</item>
+        <item name="backgroundTint">@color/fern_green</item>
+    </style>
+
+    <style name="SecondaryIconButton" parent="BasicRoundedButton">
+        <item name="iconTint">@color/fern_green</item>
+        <item name="backgroundTint">@color/dirty_white</item>
+
+    </style>
+
+    <style name="TertiaryIconButton" parent="BasicRoundedButton">
+        <item name="iconTint">@color/fern_green</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="SignalButtons">
+        <item name="android:layout_width">156dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">16dp</item>
+        <item name="marginHorizontal">24dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/rubiklight</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SignalThankYouPopUpOkButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/rubiklight</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SignalNextButton" parent="SignalButtons">
+        <item name="selectableItemBackground">@drawable/signal_forward_button_selector</item>
+    </style>
+
+    <style name="GoogleSignInStyle" parent="SignalButtons">
+        <item name="selectableItemBackground">@drawable/signal_forward_button_selector</item>
+        <item name="iconGravity">textStart</item>
+        <item name="fontFamily">@font/rubikmedium</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+
+    <style name="OnboardingNext">
+        <item name="android:layout_width">76dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/rubiklight</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SignalCanselButton" parent="SignalButtons">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="TertiaryCamera" parent="BasicRoundedButton">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="CameraIconButton" parent="BasicRoundedButton">
+        <item name="iconTint">@color/middle_green_yellow</item>
+        <item name="backgroundTint">@color/black_glaze_transparent</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <!-- COLORED BUTTONS -->
+
+    <!-- SIZED BUTTONS -->
+    <style name="PrimaryFilledSmallButton" parent="PrimaryFilledButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">2dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+    </style>
+
+    <style name="PrimaryFilledMediumButton" parent="PrimaryFilledButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">4dp</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <style name="PrimaryFilledLargeButton" parent="PrimaryFilledButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:background">@drawable/filled_button_selector</item>
+    </style>
+
+    <style name="SecondaryFilledSmallButton" parent="SecondaryFilledButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">2dp</item>
+        <item name="iconSize">16dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <style name="SecondaryFilledMediumButton" parent="SecondaryFilledButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">4dp</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <style name="SecondaryFilledLargeButton" parent="SecondaryFilledButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+    </style>
+
+    <style name="PrimaryOutlinedSmallButton" parent="PrimaryOutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">2dp</item>
+        <item name="iconSize">16dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <style name="PrimaryOutlinedMediumButton" parent="PrimaryOutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="iconPadding">4dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="PrimaryOutlinedLargeButton" parent="PrimaryOutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+    </style>
+
+    <style name="GoogleSignIinButton" parent="PrimaryOutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- SIZED BUTTONS -->
+
+    <!-- FONTS -->
+    <style name="DisplayLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_display_large</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="DisplayMedium" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_display_medium</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="DisplaySmall" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_display_small</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="HeadlineLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_large</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="HeadlineMedium" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_medium</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="HeadlineSmall" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_small</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="TopBarTitle" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_small</item>
+        <item name="android:fontFamily">@font/rubikextrabold</item>
+    </style>
+
+    <style name="TitleLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_tittle_large</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="TitleMedium" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_tittle_medium</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="TitleSmall" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_tittle_small</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="LabelLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_label_large</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="LabelMedium" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_label_medium</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="LabelSmall" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_label_small</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="ReportsTabStyle" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_label_small</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="BodyMedium" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_body_medium</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="BodySmall" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_body_small</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="Overline" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_overline</item>
+        <item name="android:fontFamily">@font/rubikbold</item>
+    </style>
+
+    <style name="Caption" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="CaptionGoogleButton" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+    </style>
+
+    <style name="LoginTitleLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_large</item>
+        <item name="android:fontFamily">@font/rubikextrabold</item>
+    </style>
+
+    <style name="OnboardingTitle" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_small</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OnboardingSkip" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_tittle_medium</item>
+        <item name="android:fontFamily">@font/rubikmedium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OnboardingTitleLarge" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textSize">@dimen/text_headline_small</item>
+        <item name="android:fontFamily">@font/rubikbold</item>
+    </style>
+    <!-- FONTS -->
+
+    <style name="ChipCategory" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="chipEndPadding">16dp</item>
+        <item name="chipStartPadding">16dp</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="textStartPadding">8dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipMinHeight">40dp</item>
+
+        <item name="android:checkable">true</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="android:textAppearance">@style/LabelSmall</item>
+
+        <item name="chipStrokeColor">@color/fern_green</item>
+        <item name="android:textColor">@color/chip_pin_category_text_color</item>
+        <item name="chipBackgroundColor">@color/chip_pin_category_background_color</item>
+        <item name="chipIconTint">@color/chip_pin_category_icon_color</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RoundedImageViewGallery" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">9dp</item>
+    </style>
+
+    <style name="TopAppBar">
+        <item name="android:background">@color/white</item>
+        <item name="navigationIcon">@drawable/top_bar_back_arrow</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="MaterialAlertDialog_rounded" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+    </style>
+
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorControlNormal">@color/philippine_silver</item>
+        <item name="colorControlActivated">@color/middle_green_yellow</item>
+    </style>
+
+    <style name="RoundedCameraViewGallery" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.LovenPark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/fern_green</item>
+        <item name="colorPrimaryVariant">@color/eerie_black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/middle_green_yellow</item>
+        <item name="colorSecondaryVariant">@color/dirty_white</item>
+        <item name="colorOnSecondary">@color/granite_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/fern_green</item>
+        <!-- Application font family. -->
+        <item name="android:fontFamily">@font/dinproregular</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetStyleDialogTheme</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.LovenPark.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/fern_green</item>
+        <item name="android:statusBarColor">@color/fern_green</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.CardView" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">5%</item>
+        <item name="cornerSizeTopRight">5%</item>
+    </style>
+
+    <style name="BottomSheetStyleDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="RoundedTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/profile_tab_selector</item>
+        <item name="tabIndicator">@null</item>
+        <item name="cornerRadius">99dp</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/fern_green</item>
+        <item name="tabTextAppearance">@color/fern_green</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

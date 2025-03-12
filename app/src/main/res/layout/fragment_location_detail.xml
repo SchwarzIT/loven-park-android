@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".locationlist.LocationDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/location_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_location_detail_picture" />
+
+        <TextView
+            android:id="@+id/location_category"
+            style="@style/BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginVertical="8dp"
+            android:drawablePadding="8dp"
+            android:gravity="start|top"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_pictures"
+            tools:text="Място за спорт на открито" />
+
+        <TextView
+            android:id="@+id/location_estimate_arrival"
+            style="@style/BodySmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_walk"
+            app:drawableTint="@color/granite_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/location_category"
+            app:layout_constraintTop_toBottomOf="@id/location_pictures"
+            tools:text="3 мин пеша" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/go_to_location"
+            style="@style/SecondaryFilledLargeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:backgroundTint="@color/fern_green"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="12dp"
+            android:text="@string/pin_location_go_there"
+            android:textAppearance="@style/LabelLarge"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:drawableTint="@color/white"
+            app:icon="@drawable/ic_send"
+            app:layout_constraintEnd_toStartOf="@id/create_signal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_category" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_signal"
+            style="@style/SecondaryFilledLargeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/create_signal"
+            android:textAppearance="@style/LabelLarge"
+            android:textStyle="bold"
+            app:icon="@drawable/megaphone_3_1"
+            app:iconPadding="8dp"
+            app:iconTint="@color/fern_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/go_to_location"
+            app:layout_constraintTop_toBottomOf="@id/location_category" />
+
+        <TextView
+            android:id="@+id/location_info_title"
+            style="@style/TitleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/pin_location_info_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/create_signal" />
+
+        <TextView
+            android:id="@+id/location_info_text"
+            style="@style/BodyLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="60dp"
+            android:gravity="start|top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_info_title"
+            tools:text="Lorem ipsum dolor sit amet, consec tetur adipiscing elit Lorem ipsum dolor sit amet, consec tetur adipiscing elitLorem ipsum dolor sit amet, consec tetur adipiscing elitLorem ipsum dolor sit amet, consec tetur adipiscing elitLorem ipsum dolor sit amet, consec tetur adipiscing elit." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

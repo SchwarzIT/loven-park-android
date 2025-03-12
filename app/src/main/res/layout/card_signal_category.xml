@@ -1,0 +1,52 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_categories"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/signal_category_cv_margin_horizontal"
+    android:layout_marginVertical="@dimen/signal_category_cv_margin_vertical"
+    android:outlineProvider="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/signal_category_cl_width"
+        android:layout_height="@dimen/signal_category_cl_height"
+        android:layout_margin="2dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_signal_check_box"
+            android:layout_width="@dimen/signal_check_box_width_height"
+            android:layout_height="@dimen/signal_check_box_width_height"
+            android:src="@drawable/signal_check_box_checked"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/iv_signal_category"
+            android:layout_width="@dimen/signal_category_iv_width"
+            android:layout_height="@dimen/signal_category_iv_height"
+            android:src="@drawable/ic_signal_dead_animal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_signal_categories"
+            style="@style/BodySmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_signal_category"
+            tools:text="@string/signal_category_animal_carcasses_found" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

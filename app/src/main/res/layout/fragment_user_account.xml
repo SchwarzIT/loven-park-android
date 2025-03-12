@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="24dp"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".profile.view.UserAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_profile_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_profile_picture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <TextView
+            android:id="@+id/user_greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/user_profile_picture"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/general_greeting"
+            android:layout_marginEnd="72dp"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/pure_black"
+            android:fontFamily="@font/rubikregular" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubikmedium"
+            android:padding="0dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/pure_black"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="72dp"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            app:boxBackgroundColor="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            tools:text="Veneta Paunova"
+            app:layout_constraintStart_toStartOf="@id/user_greeting"
+            app:layout_constraintEnd_toEndOf="@id/user_greeting"
+            app:layout_constraintTop_toBottomOf="@id/user_greeting"/>
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_rectangle"
+            android:src="@drawable/ic_edit_in_curcle"
+            app:layout_constraintBottom_toBottomOf="@id/user_profile_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/user_profile_picture" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_changes"
+            style="@style/PrimaryFilledLargeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="24dp"
+            android:paddingVertical="12dp"
+            android:text="@string/user_profile_settings_save_changes"
+            android:visibility="gone"
+            android:textAppearance="@style/LabelLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/container_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/account_info"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/container_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/account_info">
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/reports"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/saved_favourites_pins"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/terms_and_conditions"
+                android:clickable="true"
+                android:visibility="gone"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/privacy_policy"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/app_rating"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/logout"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.schwarzit.lovenpark.view.AccountOption
+                android:id="@+id/delete_user_profile"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/fern_green"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="62dp"
+        android:src="@drawable/lovenpark_logo_dark_180px_1" />
+
+    <TextView
+        android:id="@+id/inspiration_quote"
+        style="@style/HeadlineLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="44dp"
+        android:gravity="center_horizontal"
+        android:text="@string/inspiration_quote"
+        android:textColor="@color/dirty_white" />
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="152dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/loading_indicator_rotation" />
+</LinearLayout>
+

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fern_green"
+    tools:context=".onboarding.OnboardingFragment">
+
+    <ImageView
+        android:id="@+id/onboarding_top_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/onboarding_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignInInProfile"
+        style="@style/OnboardingTitleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_title"
+        android:textColor="@color/dirty_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboarding_top_image" />
+
+    <ImageView
+        android:id="@+id/onboarding_animation_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignInInProfile"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onboarding_animation_background"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loven_park_onboarding_explore" />
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:layout_constraintTop_toBottomOf="@+id/onboarding_animation_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/iv_title"
+                android:text="@string/onboarding_title_enjoy"
+                android:textColor="@color/fern_green"
+                style="@style/OnboardingTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 />
+
+            <TextView
+                android:id="@+id/onboarding_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onboarding_description_explore"
+                android:textAppearance="@style/TitleMedium"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_skip"
+                app:layout_constraintBottom_toBottomOf="@id/onboarding_next"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/onboarding_next"
+                android:layout_width="wrap_content"
+                android:text="@string/skip"
+                android:textColor="@color/fern_green"
+                style="@style/OnboardingSkip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/onboarding_skip" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/onboarding_next"
+                style="@style/OnboardingNext"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="32dp"
+                android:enabled="true"
+                android:textAppearance="@style/LabelLarge"
+                app:icon="@drawable/ic_arrow_narrow_right"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/white" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintBottom_toBottomOf="@id/onboarding_next"
+                app:layout_constraintEnd_toStartOf="@id/onboarding_next"
+                app:layout_constraintStart_toEndOf="@id/tv_skip"
+                app:layout_constraintTop_toTopOf="@id/onboarding_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="60dp">
+
+                <ImageView
+                    android:id="@+id/iv_first_step"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/onboarding_pager_rectangle" />
+
+                <ImageView
+                    android:id="@+id/iv_second_step"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_first_step"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/onbording_pager_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_third_step"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_second_step"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/onbording_pager_circle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

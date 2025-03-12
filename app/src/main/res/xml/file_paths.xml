@@ -1,0 +1,17 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    production images path-->
+    <external-files-path
+        name="my_images"
+        path="Android/data/com.schwarzit.lovenpark/files/Pictures" />
+
+    <!--an images path that would work on emulator-->
+    <external-files-path
+        name="my_debug_images"
+        path="storage/emulated/0/Android/data/com.schwarzit.lovenpark/files/Pictures/" />
+
+    <!--    wherever we're right now-->
+    <external-files-path
+        name="my_root_images"
+        path="/" />
+
+</paths>

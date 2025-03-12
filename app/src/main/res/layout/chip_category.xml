@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ChipCategory"
+    tools:chipIcon="@drawable/bench"
+    tools:text="@string/choose_from_gallery" />
+

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signal_root_view_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="32dp"
+    tools:context=".signal.SignalRootFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_info_text"
+            style="@style/BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="9sp"
+            android:text="@string/signal_info_select_report_category"
+            app:layout_constraintBottom_toBottomOf="@id/cl_info_container"
+            app:layout_constraintStart_toStartOf="@id/cl_info_container"
+            app:layout_constraintTop_toTopOf="@id/cl_info_container" />
+
+        <ImageView
+            android:id="@+id/iv_signal_check_box"
+            android:layout_width="@dimen/info_icon"
+            android:layout_height="@dimen/signal_check_box_width_height"
+            android:src="@drawable/signal_info_circle"
+            app:layout_constraintBottom_toBottomOf="@id/cl_info_container"
+            app:layout_constraintEnd_toEndOf="@id/cl_info_container"
+            app:layout_constraintTop_toTopOf="@id/cl_info_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_outer_fragments_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_info_container">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_fragments_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="30dp"
+            android:layout_marginBottom="-30dp"
+            >
+
+            <FrameLayout
+                android:id="@+id/fl_fragments_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dirty_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_outer_fragments_container">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_cansel"
+            style="@style/SignalCanselButton"
+            android:enabled="true"
+            android:text="@string/cancel"
+            app:icon="@drawable/ic_x_close"
+            android:textColor="@color/fern_green"
+            android:textAppearance="@style/LabelLarge"
+            app:iconTint="@color/fern_green"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_forward"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_forward"
+            style="@style/SignalNextButton"
+            android:enabled="false"
+            android:text="@string/forward"
+            app:iconTint="@color/white"
+            app:iconGravity="textEnd"
+            android:textAppearance="@style/LabelLarge"
+            app:icon="@drawable/ic_arrow_narrow_right"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/button_cansel"
+            app:layout_constraintTop_toTopOf="@id/button_cansel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_cansel"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_create_signal_loading_bar"
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="152dp"
+        android:elevation="2dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/loading_indicator_signal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDelayInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:padding="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/signal_submission_counter_msg"
+        android:textAlignment="center"
+        android:textAppearance="@style/LabelSmall"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_create_signal_loading_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

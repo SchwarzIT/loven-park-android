@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".signal.SignalCategoryFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_signal_categorie"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/card_signal_category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

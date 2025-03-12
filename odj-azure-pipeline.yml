@@ -1,0 +1,31 @@
+trigger:
+  batch: true
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    ref: refs/heads/master
+    name: schwarzit.odj-pipeline-templates/odj-deliver-templates
+
+variables:
+- group: odj-technical-product-properties
+- group: odj-component-android-properties
+
+extends:
+  template: templates/technologies/java-gradle/v2/odj-pipeline-template-technology-java-gradle.yml@templates
+  parameters:
+    odj_devenv_artifact_repository:
+    - artifactory_saas
+    odj_devenv_dependency_scanner:
+    - snyk_saas_dependency
+    - snyk_saas_dockerfile
+    odj_devenv_pipeline: azuredevops  # Managed by ODJ, do not modify
+    odj_devenv_code_repository: azuredevops  # Managed by ODJ, do not modify
+    odj_runenv_runtime: none  # Managed by ODJ, do not modify
+    odj_runenv_provider: none  # Managed by ODJ, do not modify
+    odj_runenv_component_type: supportive  # Managed by ODJ, do not modify
+    productive_branch: refs/heads/main
+    ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
+      odj_deploy_stages:
+      - prod

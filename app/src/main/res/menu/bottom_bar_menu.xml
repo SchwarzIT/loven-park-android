@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aboutSectionFragment"
+        android:enabled="true"
+        android:icon="@drawable/tree_icon_black"
+        android:title="@string/about_park" />
+    <item
+        android:id="@+id/googleMapFragment"
+        android:enabled="true"
+        android:icon="@drawable/pin_4"
+        android:title="@string/map" />
+    <item
+        android:id="@+id/userAccountFragment"
+        android:enabled="true"
+        android:icon="@drawable/profile_darkgreen"
+        android:title="@string/profile" />
+</menu>
