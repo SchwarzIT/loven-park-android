@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android-green)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.8.0-blueviolet.svg)](https://kotlinlang.org/)
-[![Gradle](https://img.shields.io/badge/Gradle-8.0-brightgreen.svg)](https://gradle.org/)
+[![Gradle](https://img.shields.io/badge/Gradle-7.3.3-brightgreen.svg)](https://gradle.org/)
 
 > A CSR initiative to help protect one of the hidden gems in Sofia - Loven Park. Hearted by Schwarz IT
 
